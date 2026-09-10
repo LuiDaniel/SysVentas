@@ -1,6 +1,8 @@
 package com.sysventas.repository;
 
+import java.lang.foreign.Linker.Option;
 import java.util.List;
+import java.util.Optional;
 
 import com.sysventas.exeption.ModelNotFoundException;
 
@@ -14,15 +16,9 @@ import com.sysventas.exeption.ModelNotFoundException;
 public interface ICrudGenericoRepository<T, ID> {
 
     T save(T entity);
-
     T update(T entity);
-
-    void deleteById(ID id);
-
-    /**
-     * @throws ModelNotFoundException si no existe una entidad con ese id.
-     */
-    T findById(ID id) throws ModelNotFoundException;
-
+    Optional<T>findById(ID id);
     List<T> findAll();
+    void deleteById(ID id);
+    boolean existsById(ID id);
 }
