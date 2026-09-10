@@ -33,7 +33,6 @@ public abstract class AbastractJpaRepository<T, ID> implements ICrudGenericoRepo
         throw new RuntimeException("Registro no encontrado para actualizar | ID: " + id);
     }
 
-
     @Override 
     public Optional<T> findById(ID id){
         return data.stream()

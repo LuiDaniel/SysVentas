@@ -19,6 +19,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Compra {
+    private Long idCompra;
 
     @NotNull(message = "La fecha de compra es obligatoria")
     @PastOrPresent(message = "La fecha de compra no puede ser futura")

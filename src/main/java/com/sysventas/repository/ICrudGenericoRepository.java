@@ -1,10 +1,7 @@
 package com.sysventas.repository;
 
-import java.lang.foreign.Linker.Option;
 import java.util.List;
 import java.util.Optional;
-
-import com.sysventas.exeption.ModelNotFoundException;
 
 /**
  * Contrato generico para las operaciones CRUD (Crear, Leer, Actualizar, Eliminar)
